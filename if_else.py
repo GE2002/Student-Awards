@@ -7,7 +7,12 @@ while True:
     if last_name.upper() == "ZZZ":
         break
     first_name = input("Enter the first name: ")
-    gpa = float(input("Enter the GPA: "))
+    while True:
+        try: 
+            gpa = float(input("Enter the GPA: "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a numeric value for GPA.")
 
     if gpa >= 3.5:
         print(first_name, "has made the Dean's list.")
